@@ -11,9 +11,9 @@ html{
 }
 
 body{
-    background: #191919/*url(b.png) no-repeat center*/;
-    background-size:cover;
-    
+    background: #000000;
+    background-size: cover;
+    overflow-x: hidden;
 }
 
 .header{
@@ -45,51 +45,51 @@ body{
 .link1 a, .link2 a, .link3 a, .link4 a{
 
     margin-left: 30px;
-    transition: all 0.3s ease-out ;
+    transition: all 0.7s ease-out ;
     text-transform: uppercase;
     color: white;
     font-family: 'GFS Didot';
 }
 
 .link4 a{
-    border: 1px solid rgb(14, 202, 14);
+    border: 1px solid #e3d9c6;
     padding: 10px;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 .link4 a:hover{
-    background-color: rgb(14, 202, 14);
+    background-color: #fffeef;
     color: black;
+}
+
+img{
+    position: absolute;
+    width: 800px;
+    height: 500px;
+    top: 50px;
+    right: 5%;
+    z-index: -1;
 }
 
 .name{
     display: inline-block;
-    color: white;
+    color: #fffeef;
     font-size: 80px;
     margin-left: 30px;
     font-weight: 500;
-    animation: flicker 1.5s infinite alternate;
     width: fit-content;
     font-family: 'GFS Didot';
+    line-height: 100px;
     /*background: url(first_section_back.png) no-repeat center;
     background-size: contain;
     */
 }
 
-
-@keyframes flicker {
-    
-    0%, 18%, 22%, 25%, 53%, 57%, 100% {
-  
-        text-shadow:
-        0 0 4px #fff,
-        0 0 40px fuchsia
-    }
-    
-    20%, 24%, 55% {        
-        text-shadow: none;
-    }    
-  }
+.name span{
+    font-size: 30px;
+    font-family: 'GFS Didot';
+    margin-bottom: 30px;
+}
   
   .projects, .skills, .about-me{
       color: white;
@@ -99,14 +99,18 @@ body{
       width: 100%;
       position: relative;
       margin-top: 50px;
-      
+      margin-left: 10px;
+  }
+
+  .about-me{
+      margin-top: 150px;
   }
 
   .skills i{
       position: relative;
       margin-top: 20px;
-      color: fuchsia;
-      border-left: 3px solid fuchsia;
+      color: #fffeef;
+      border-left: 3px solid #fffeef;
       padding-left: 5px;
   }
 
@@ -114,4 +118,17 @@ body{
       position: relative;
       left: 30%;
       width: 70%;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #000000; 
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #383e42; 
+    border-radius: 5px;
   }
