@@ -11,7 +11,7 @@ html{
 }
 
 body{
-    background: #000000;
+    background: #fffeef;
     background-size: cover;
     overflow-x: hidden;
 }
@@ -34,7 +34,7 @@ body{
     width: fit-content;
     position: absolute;
     display: flex;
-    color: white;
+    color: #191919;
     text-align: center;
     align-items: center;
     right: 5%;
@@ -47,39 +47,51 @@ body{
     margin-left: 30px;
     transition: all 0.7s ease-out ;
     text-transform: uppercase;
-    color: white;
+    color: #191919;
     font-family: 'GFS Didot';
 }
 
 .link4 a{
-    border: 1px solid #e3d9c6;
+    border: 1px solid #191919;
     padding: 10px;
     border-radius: 5px;
 }
 
 .link4 a:hover{
-    background-color: #fffeef;
-    color: black;
+    background-color: #191919;
+    color: #fffeef;
 }
 
-img{
-    position: absolute;
+.presentation{
+    position: relative;
+    display: grid;
+    grid-template-columns: 65% 35%;
+}
+
+ .presentation .laptop-image{
+    position: relative;
+    display: inline-block;
     width: 800px;
-    height: 500px;
-    top: 50px;
-    right: 5%;
-    z-index: -1;
+    height: 600px;
+}
+
+.presentation img{
+    display: inline-block;
+    width: 600px;
+    height: 800px;
 }
 
 .name{
     display: inline-block;
-    color: #fffeef;
+    position: relative;
+    color: #191919;
     font-size: 80px;
     margin-left: 30px;
     font-weight: 500;
     width: fit-content;
     font-family: 'GFS Didot';
     line-height: 100px;
+ 
     /*background: url(first_section_back.png) no-repeat center;
     background-size: contain;
     */
@@ -91,10 +103,10 @@ img{
     margin-bottom: 30px;
 }
   
-  .projects, .skills, .about-me{
-      color: white;
+  .projects, .skills, .about-me, .contacts{
+      color: #191919;
       font-family: 'GFS Didot';
-      font-size: 40px;
+      font-size: 24px;
       height: 100vh;
       width: 100%;
       position: relative;
@@ -103,14 +115,14 @@ img{
   }
 
   .about-me{
-      margin-top: 150px;
+      margin-top: 200px;
   }
 
   .skills i{
       position: relative;
       margin-top: 20px;
-      color: #fffeef;
-      border-left: 3px solid #fffeef;
+      color: #191919;
+      border-left: 3px solid #191919;
       padding-left: 5px;
   }
 
@@ -125,10 +137,21 @@ img{
   }
   
   ::-webkit-scrollbar-track {
-    background: #000000; 
+    background: #fffeef; 
   }
    
   ::-webkit-scrollbar-thumb {
-    background: #383e42; 
+    background: #191919; 
     border-radius: 5px;
+  }
+
+  @media screen and (max-width: 992px) {
+    .presentation img{
+      display: none;
+    }
+
+    .about-me{
+        margin-top: 300px;
+    }
+
   }
